@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".Fragments.MyAccountFragment">
+
+
+    <TextView
+        android:id="@+id/prof"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="8dp"
+        android:paddingStart="15dp"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_account_circle_black_24dp"
+        android:gravity="center_vertical"
+        android:drawablePadding="5dp"
+        android:text="My Profile" />
+
+    <View
+        android:id="@+id/devider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/prof"
+        android:background="@android:color/darker_gray"/>
+
+    <RelativeLayout
+        android:id="@+id/parentrel"
+        android:layout_below="@id/devider1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="200dp"
+            android:layout_height="160dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            android:layout_toRightOf="@id/rellaout"
+            android:src="@drawable/ic_account_circle_black_24dp" />
+
+        <RelativeLayout
+            android:id="@+id/rellaout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/nameTxt"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/input_background"
+                android:hint="My name"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:paddingStart="10dp" />
+
+            <EditText
+                android:id="@+id/bioTxt"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/nameTxt"
+                android:layout_margin="5dp"
+                android:background="@drawable/input_background"
+                android:hint="My Bio"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:paddingStart="10dp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/rellaout"
+            android:layout_margin="20dp"
+            android:width="200dp"
+            android:height="60dp"
+            android:background="@color/colorPrimary"
+            android:text="Save"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/myintro"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/parentrel"
+
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_save_black_24dp"
+        android:gravity="center_vertical"
+        android:drawablePadding="5dp"
+        android:text="My Intro" />
+
+    <View
+        android:id="@+id/devider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/myintro"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:id="@+id/intro"
+        android:layout_below="@id/devider2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/signOutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_exit_to_app_black_24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp" />
+</RelativeLayout>
